@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link rel="icon" href="images/svg.jpg" type="image/x-icon" />
+    <title>STORY OF MY LIFE</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Navigation Container -->
+<div class="nav-container">
+  <!-- Logo (Left) -->
+   <div class="hello">
+  <div class="logo" target="_top">
+    <p>joännä</p>
+  </div>
+  </div>
+
+  <!-- Main Navigation (Center) -->
+  <nav class="main-nav">
+      <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+      </ul>
+  </nav>
+
+  <!-- Dropdown Menu (Hidden by Default) -->
+  <div class="dropdown_menu">
+      <ul>
+          <li><a href="homepage.html">Home</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="about.html">About</a></li>
+      </ul>
+  </div>
+
+  <!-- Toggle Button (For Mobile View) -->
+  <div class="toggle_btn">
+      <i class="fa-solid fa-bars"></i>
+  </div>
+
+  <!-- SVG Icon (Right) -->
+  <nav class="navbar">
+      <ul>
+          <li>
+              <a href="login.html" id="loginLink" class="active">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 100 100">
+                      <defs>
+                          <linearGradient id="outerGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                              <stop offset="0%" style="stop-color: #117508; stop-opacity: 1" />
+                              <stop offset="100%" style="stop-color: #fc8d25; stop-opacity: 1" />
+                          </linearGradient>
+                      </defs>
+                      <circle cx="50" cy="50" r="48" fill="none" stroke="url(#outerGradient)" stroke-width="4" />
+                      <image href="images/svg.png" x="5" y="5" width="90" height="90" />
+                  </svg>
+              </a>
+          </li>
+      </ul>
+  </nav>
+</div>
+
+<header>
+    <h1>STORY OF MY LIFE</h1>
+    <p><i>"A Life Still Living, A Story Still Writing"</i></p>
+</header>
+
+<section class="months">
+    <div class="month-grid fade-in">
+        <a href="january.html" class="month">January<br>
+        <br>"Calling for a New Beginning" ☎️</a>
+        <a href="february.html" class="month">February<br><br>"Chasing Passion, Finding Myself" 🎭</a>
+        <a href="march.html" class="month">March<br><br>"Fading, but Still Standing" 🌳☁️ </a>
+        <a href="april.html" class="month">April<br><br>"Holding on to Moments" 🤝</a>
+        <a href="may.html" class="month">May<br><br> "Stepping Into the Light" 🎨</a>
+        <a href="june.html" class="month">June<br><br>"Laughs, Popcorn, and Emotions" 🎬</a>
+        <a href="july.html" class="month">July<br><br>"Warmth in Celebration" 🎉</a>
+        <a href="august.html" class="month">August<br><br> "A Life in Transition" 🦋  </a>
+        <a href="september.html" class="month">September<br><br>"Leading with Purpose" 📸  </a>
+        <a href="october.html" class="month">October<br><br>"Growth, Achievements, and Goodbyes" 🎓</a>
+        <a href="november.html" class="month">November<br><br>"Finding Comfort in Small Spaces" 🐱</a>
+        <a href="december.html" class="month">December<br><br>"The Joy of Giving and Receiving" 🎁 </a>
+    </div>
+</section>
+
+
+<section id = gallery class="gallery fade-in">
+    <div class="gallery__card">
+      <img src="images/january.jpg" alt="Gallery Image 1" class="zoomable" />
+    </div>
+    <div class="gallery__card">
+      <img src="images/february.jpg" alt="Gallery Image 2" class="zoomable" />
+    </div>
+    <div class="gallery__card">
+      <img src="images/march.jpg" alt="Gallery Image 3" class="zoomable" />
+    </div>
+    <div class="gallery__card">
+      <img src="images/april.jpg" alt="Gallery Image 4" class="zoomable"/>
+    </div>
+    <div class="gallery__card">
+        <img src="images/may.jpg" alt="Gallery Image 4" class="zoomable"/>
+      </div>
+      <div class="gallery__card">
+        <img src="images/june.jpg" alt="Gallery Image 4" class="zoomable"/>
+      </div>
+      <div class="gallery__card">
+        <img src="images/july.jpg" alt="Gallery Image 4" class="zoomable"/>
+      </div>
+      <div class="gallery__card">
+        <img src="images/august.jpg" alt="Gallery Image 4" class="zoomable"/>
+      </div>
+      <div class="gallery__card">
+        <img src="images/september.jpg" alt="Gallery Image 4" class="zoomable"/>
+      </div>
+      <div class="gallery__card">
+        <img src="images/october.jpg" alt="Gallery Image 4" class="zoomable"/>
+      </div>
+      <div class="gallery__card">
+        <img src="images/november.jpg" alt="Gallery Image 4" class="zoomable"/>
+      </div>
+      <div class="gallery__card">
+        <img src="images/december.jpg" alt="Gallery Image 4" class="zoomable"/>
+      </div>
+  </section>
+
+<script src="main.js"></script>
+</body>
+  <div id="imageModal" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="modalImg">
+  </div>
+</html>

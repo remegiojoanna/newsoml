@@ -1,0 +1,387 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Navigation Bar Container */
+.nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 20px;
+    background-color: #fff;
+    border-bottom: 2px solid #ddd;
+}
+
+/* Logo (Left-Aligned) */
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+ .logo p{
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;    
+    margin-left: 5px;
+ }
+.hello .logo{
+    height: 30px;
+    width: 85px;
+
+}
+
+.logo[target]{
+    background-color: #607D3B; 
+    border-radius: 6px;
+}
+
+/* Main Navigation (Centered) */
+.main-nav {
+    flex: 2; 
+    display: flex;
+    justify-content: right;
+    margin-right: -550px;
+    position: sticky;
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+}
+
+.main-nav ul li {
+    margin: 0 15px;
+}
+
+.main-nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.main-nav ul li a:hover {
+    color: #117508;
+}
+
+/* SVG Icon Navigation (Right-Aligned) */
+.navbar {
+    flex: 1; 
+    display: flex;
+    justify-content: flex-end;
+}
+
+.navbar ul {
+    list-style: none;
+}
+
+.navbar ul li {
+    display: inline-block;
+}
+
+.navbar ul li a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+
+/* Header */
+header {
+    text-align: center;
+    padding: 20px 20px;
+    background-color: lightgray;
+}
+
+header h1 {
+    font-size: 36px;
+    color: darkolivegreen;
+}
+
+header p {
+    font-size: 18px;
+    color: black;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+
+/* Months Section */
+.months {
+    width: 100%; 
+    max-width: 100%; 
+    margin: 10px auto; 
+    padding: 20px;
+    background-color: lightgray;
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Heading for the months section */
+.months h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Grid container for months */
+.month-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);  
+    gap: 15px;
+    justify-content: center;
+}
+
+/* Individual month boxes */
+.month {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to right, #607D3B 0%, #040404  51%, #607D3B 100%);
+    color: #fff; 
+    padding: 15px; /*height*/
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.month:hover {
+    background-position: right center; /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
+  }
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 2fr); /* 4 columns */
+    gap: 20px; 
+    padding: 4.5rem 2rem; /*margin-top, gap-side*/
+    text-align: center;
+  }
+  
+  .gallery__card {
+    background: #fff;
+    width: 100%;
+    height: 20rem;
+    border: 8px solid #607D3B;
+    border-image: url(images/green.jpg) 30 round;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 5px 15px rgba(57, 53, 53, 0.705);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .gallery__card img {
+    width: 100%;
+    height: 400px; 
+    object-fit: cover;
+  }
+
+/* Hover effect for months */
+.month:hover {
+    background-color: #0d5a06; 
+    transform: scale(1.05);
+}
+
+.gallery__card:hover {
+    background-color: #0d5a06; 
+    transform: scale(1.05);
+}
+
+/* Responsive Design: Adjust for smaller screens */
+@media (max-width: 768px) {
+    .month-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .month-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(50px); 
+    transition: opacity 1s ease-out, transform 1s ease-out;
+  }
+  
+  .fade-in.show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .modal {
+    display: none; 
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  #myModal {
+    display: none; /* Hide the modal initially */
+}
+
+  /* Modal Image */
+  .modal-content {
+    max-width: 95%;
+    max-height: 95%;
+    width: auto;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.3);
+  }
+  
+  /* Close Button */
+  .close {
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .close:hover {
+    color: #f39c12;
+  }
+
+  /* Dropdown */
+.navbar .dropdown {
+    position: relative;
+    display: flex;
+    align-items: center;
+    z-index: 100;
+}
+
+.navbar .dropdown a {
+    padding: 0.5rem 1rem;
+    display: block;
+    cursor: pointer;
+    align-self: center;
+}
+
+.navbar .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    min-width: 160px;
+    top: 100%;
+    left: 0;
+    z-index: 999;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    transition: opacity 0.3s ease-in-out;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.navbar .dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.navbar .dropdown-content a:hover {
+    background-color: orange;
+}
+
+.navbar .dropdown:hover .dropdown-content {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Toggle Button */
+.toggle_btn {
+    display: none; /* Hidden on larger screens */
+    font-size: 1.8rem;
+    cursor: pointer;
+    padding: 10px;
+    color: #333;
+}
+
+/* Dropdown Menu */
+.dropdown_menu {
+    display: none;
+    position: absolute;
+    top: 80px;
+    right: 20px;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(10px);
+    border-radius: 8px;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out, visibility 0s ease 0.3s;
+}
+
+.dropdown_menu.open {
+    display: block;
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out, visibility 0s ease 0s;
+}
+
+.dropdown_menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+.dropdown_menu li {
+    text-align: center;
+    padding: 1rem;
+}
+
+.dropdown_menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    display: block;
+    padding: 10px;
+}
+
+.dropdown_menu a:hover {
+    background-color: orange;
+}
+
+/* Show toggle button in mobile view */
+@media (max-width: 992px) {
+    .toggle_btn {
+        display: block;
+    }
+
+    .main-nav {
+        display: none;
+    }
+
+    .dropdown_menu{
+        z-index: 1000;
+    }
+}
+
+@media (max-width: 576px) {
+    .dropdown_menu {
+        left: 2rem;
+    }
+}
+

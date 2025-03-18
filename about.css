@@ -1,0 +1,171 @@
+/* General */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+
+body {
+    height: 80vh;
+    background-color: #0d5a06;
+    background-image: url('images/ctu.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+/* Hero Section */
+section#hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #f1e9e9;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5));
+}
+
+#hero h1 {
+    font-size: 3.5rem;
+    font-family: 'Bebas Neue';
+    letter-spacing: 2px;
+    margin-bottom: 1.5rem;
+    color: rgb(223, 181, 104);
+    text-shadow: 2px 4px 4px rgba(27, 24, 24, 0.5);
+    transition: 0.5s ease;
+}
+
+#hero h1:hover{
+    transform: scale(1.1);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .navbar .links {
+        display: none;
+    }
+
+    .navbar .toggle_btn {
+        display: block;
+    }
+
+    .dropdown_menu.open {
+        display: block;
+    }
+}
+
+@media (max-width: 576px) {
+    .dropdown_menu {
+        left: 2rem;
+    }
+}
+
+
+.body1 {
+    margin-top: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Contact Container */
+.contact-container {
+    display: flex;
+    width: 80%;
+    max-width: 1300px;
+    background-color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    border: 3px solid black;
+    margin-bottom: 40px;
+}
+
+/* Left Section: Contact Form */
+.contact-form {
+    flex: 2;
+    background-color: #fff;
+    text-align: center;
+    padding: 50px;
+}
+
+.contact-form h1 {
+    margin: 0;
+    font-size: 28px;
+    color: #0d5a06;
+}
+
+.contact-form p {
+    color: #0d5a06;
+    margin: 10px 0 20px;
+
+}
+
+
+.contact-info form input, 
+.contact-info form textarea, 
+.contact-info form button {
+    width: 100%;
+    max-width: 400px; 
+    margin: 0 auto 15px;
+    display: block;
+    padding: 20px; 
+    border: 5px solid #0d5a06; 
+    border-radius: 10px;
+    font-size: 15px;
+}
+
+/* Button Styles */
+.contact-info form button {
+    background-color: #0d5a06;
+    color: #fff;
+    border: black;
+    cursor: pointer;
+    text-transform: uppercase;
+    width: 55%; 
+    max-width: 500px; 
+    padding: 10px;
+    transition: background-color 0.3s;
+}
+
+.contact-info form button:hover {
+    background-color: #555;
+}
+
+/* Right Section: Contact Info */
+.contact-info {
+    flex: 1;
+    background-color: black;
+    border: 1px solid black;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px;
+    text-align: center;
+    max-width: 400px;
+}
+
+.contact-info h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #ffcc00;
+}
+
+.contact-info p {
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column;
+    }
+
+    .contact-info {
+        padding: 20px;
+    }
+}
+
